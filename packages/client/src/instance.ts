@@ -14,7 +14,7 @@ export const instance: Misskey.entities.InstanceMetadata = reactive(data ? JSON.
 
 export async function fetchInstance() {
 	const meta = await api('meta', {
-		detail: false
+		detail: true
 	});
 
 	for (const [k, v] of Object.entries(meta)) {
